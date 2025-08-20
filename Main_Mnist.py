@@ -86,7 +86,7 @@ class CNNModel(nn.Module):
 # Initialize the model, loss function, and optimizer
 model = CNNModel().to(device)
 
-
+# Training Function
 def train_model():
     # Hyperparameters
     learning_rate = 0.001
@@ -116,7 +116,7 @@ def train_model():
                 print(f'Epoch [{epoch+1}/{epochs}], Step [{batch}/{total_no_steps}], Loss: {loss.item():.4f}')
    
 
-# Evaluation
+# Evaluation Function
 def evaluate():
     model.eval()
     with torch.no_grad():
